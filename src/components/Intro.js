@@ -5,7 +5,7 @@ import Socials from "../subComponents/Socials"
 import Navbar from "../subComponents/Navbar"
 import IntroContent from "./IntroContent"
 import { Basketball } from './AllSvgs';
-import { animate } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 //passes theme

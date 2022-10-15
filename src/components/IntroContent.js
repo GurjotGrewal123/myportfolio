@@ -34,11 +34,13 @@ display: flex;
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%,0%);
-    width: 100%;
+    max-height: 50vh;
+    max-width: 32vw;
+    transform: translate(-50%,-1.5%);
     height: auto;
 }
 `
+
 
 const Text = styled.div`
 font-size: 2em;
@@ -64,7 +66,8 @@ const IntroContent = () => {
         >
             <SubBox>
                 <Text>
-                    Hi, my name is Gurjot...
+                    <h1>Hi,</h1>
+                    <h3>my name is Gurjot...</h3>
                     <p>I am studying Software Engineering at the University of Ottawa.</p>
                 </Text>
             </SubBox>
