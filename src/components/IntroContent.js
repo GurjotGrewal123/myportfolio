@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import Me from '../assets/images/Me.png'
 
 
 const Box = styled(motion.div)`
@@ -40,10 +41,9 @@ display: flex;
 `
 
 const Text = styled.div`
-font-size: calc(1em + 1.5vw);
+font-size: 2em;
 color: ${props => props.theme.body};
 padding: 2rem;
-cursor: pointer;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
@@ -53,6 +53,7 @@ justify-content: space-evenly;
     font-weight:300;
 }
 `
+
 
 const IntroContent = () => {
     return (
@@ -64,6 +65,7 @@ const IntroContent = () => {
             <SubBox>
                 <Text>
                     Hi, my name is Gurjot...
+                    <p>I am studying Software Engineering at the University of Ottawa.</p>
                 </Text>
             </SubBox>
             <SubBox>
@@ -72,6 +74,7 @@ const IntroContent = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 2 }}
                 >
+                    <img className="pic" src={Me} alt="Profile Pic" />
                 </motion.div>
             </SubBox>
         </Box>

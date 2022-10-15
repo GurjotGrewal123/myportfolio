@@ -6,8 +6,7 @@ import Navbar from "../subComponents/Navbar"
 import IntroContent from "./IntroContent"
 import { Basketball } from './AllSvgs';
 import { animate } from 'framer-motion';
-const DROP_HEIGHT = "150px";
-const DURATION = "0.7s";
+
 
 //passes theme
 const IntroContainer = styled.div`
@@ -34,7 +33,7 @@ from {
     transform: translateY(0) scale(1);
   }
   to {
-    transform: translateY(${DROP_HEIGHT}) scale(1, 0.9);
+    transform: translateY(150px) scale(1, 0.9);
   }
 }
 
@@ -52,8 +51,8 @@ to{
 const Center = styled.button`
 position:absolute;
 transform: translate(-50%,-50%);
-top: ${props => props.click ? '35%' : '40%'};
-left: ${props => props.click ? '45%' : '50%'};
+top: ${props => props.click ? '5%' : '40%'};
+left: ${props => props.click ? '70%' : '50%'};
 scale: ${props => props.click ? '40%' : '100%'};
 border: none;
 outline: none;
@@ -68,7 +67,7 @@ transition: all 1s ease;
 
 &>:first-child{
     animation-name: ${upAndDown};
-    animation-duration: ${DURATION};
+    animation-duration: 0.7s;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
     animation-iteration-count: infinite;
