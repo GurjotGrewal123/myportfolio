@@ -2,7 +2,7 @@ import { Route, Switch } from "react-router"
 import { ThemeProvider } from "styled-components"
 import { lightTheme } from "./components/Themes"
 
-import GlobaStyle from "./globalStyles"
+import GlobalStyle from "./globalStyles"
 import Intro from "./components/Intro"
 import About from "./components/About"
 import Work from "./components/Work"
@@ -11,7 +11,7 @@ import Projects from "./components/Projects"
 
 function App() {
   return <>
-    <GlobaStyle />
+    <GlobalStyle />
 
     <ThemeProvider theme={lightTheme}>
       <Switch>
