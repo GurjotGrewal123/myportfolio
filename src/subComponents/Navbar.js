@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Pages = styled.div`
 display: flex;
@@ -20,20 +20,21 @@ z-index: 3;
 const Navbar = () => {
     return (
         <Pages>
-            <NavLink style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} target="_blank" to="/Intro">
+            <Link style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} target="_blank" to="/">
                 // home
-            </NavLink>
-            <NavLink style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} target="_blank" to="/About">
+            </Link>
+            <Link style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} target="_blank" to="/About">
                 // about me
-            </NavLink>
-            <NavLink style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} target="_blank" to="/Work">
+            </Link>
+            <Link style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} target="_blank" to="/Work">
                 // work
-            </NavLink>
-            <NavLink style={{ textDecoration: 'none', color: 'inherit' }} target="_blank" to="/Projects">
+            </Link>
+            <Link style={{ textDecoration: 'none', color: 'inherit' }} target="_blank" to="/Projects">
                 // projects
-            </NavLink>
+            </Link>
 
         </Pages>
+
     )
 }
 

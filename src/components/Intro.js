@@ -3,7 +3,9 @@ import { useState } from 'react';
 import styled, { keyframes } from "styled-components"
 import Socials from "../subComponents/Socials"
 import Navbar from "../subComponents/Navbar"
+import IntroContent from "./IntroContent"
 import { Basketball } from './AllSvgs';
+import { animate } from 'framer-motion';
 const DROP_HEIGHT = "150px";
 const DURATION = "0.7s";
 
@@ -65,13 +67,12 @@ align-items: center;
 transition: all 1s ease;
 
 &>:first-child{
-    animation: ${rotate} infinite 1.5s linear;
     animation-name: ${upAndDown};
     animation-duration: ${DURATION};
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
     animation-iteration-count: infinite;
-}
+ }
 
 &>:last-child{
     display: ${props => props.click ? 'none' : 'inline-block'};
@@ -85,10 +86,11 @@ position: absolute;
 background-color: #000;
 top: 0;
 bottom: 0;
-right: 50;
-width: 50%;
-height: 100%;
+right: 50%;
+width: ${props => props.click ? '50%' : '0%'};
+height: ${props => props.click ? '100%' : '0%'};
 z-index:1;
+transition: height 0.5s ease, width 1s ease 0.5s;
 `
 
 
@@ -103,13 +105,14 @@ const Intro = () => {
         <IntroContainer>
             <DarkDiv click={click} />
             <Container>
-                <Socials />
+                <Socials theme={click ? 'dark' : 'light'} />
                 <Navbar />
                 <Center click={click} onClick={() => handleClick()}>
                     <Basketball width={120} height={120} fill='currentColor' />
                     <span>click me</span>
                 </Center>
             </Container>
+            {click ? <IntroContent click={click} /> : null}
         </IntroContainer>
     )
 }

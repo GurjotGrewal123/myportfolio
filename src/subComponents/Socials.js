@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Github, LinkedIn, Email } from "../components/AllSvgs"
+import { darkTheme } from "../components/Themes";
 
 const Icons = styled.div`
 display: flex;
@@ -24,30 +25,31 @@ z-index: 3;
 const Line = styled.div`
 width: 2px;
 height: 5rem;
-background-color: ${props => props.theme.text};
+background-color: ${props => props.color === 'dark' ? darkTheme.text : darkTheme.body};
+
 
 `
 
-const Socials = () => {
+const Socials = (props) => {
     return (
         <Icons>
             <div>
                 <NavLink style={{ color: 'inherit' }} target="_blank" to={{ pathname: "https://github.com/GurjotGrewal123" }}>
-                    <Github width={25} height={25} fill='currentColor' />
+                    <Github width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body} />
                 </NavLink>
             </div>
             <div>
                 <NavLink style={{ color: 'inherit' }} target="_blank" to={{ pathname: "https://www.linkedin.com/in/gurjotgrewal24/" }}>
-                    <LinkedIn width={25} height={25} fill='currentColor' />
+                    <LinkedIn width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body} />
                 </NavLink>
             </div>
             <div>
                 <NavLink style={{ color: 'inherit' }} target="_blank" to={{ pathname: "mailto:gurjot_grewal@outlook.com" }}>
-                    <Email width={25} height={25} fill='currentColor' />
+                    <Email width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body} />
                 </NavLink>
             </div>
 
-            <Line></Line>
+            <Line color={props.theme} />
 
         </Icons>
     )
