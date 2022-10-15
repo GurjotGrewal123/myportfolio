@@ -1,8 +1,11 @@
+import GlobaStyle from "./globalStyles"
+
 function App() {
-  return <div>
+  return <>
+    <GlobaStyle />
     App File
-    </div>
-    
+  </>
+
 }
 
 export default App
