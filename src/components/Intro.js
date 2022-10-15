@@ -101,7 +101,7 @@ const Intro = () => {
     }
 
     return (
-        <IntroContainer>
+        <IntroContainer id="home">
             <DarkDiv click={click} />
             <Container>
                 <Socials theme={click ? 'dark' : 'light'} />

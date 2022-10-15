@@ -21,30 +21,30 @@ z-index: 3;
 const Navbar = () => {
     return (
         <Pages>
-            <Link style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} target="_blank" to="/">
+            <a href="#home" style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }}>
                 <motion.h4
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >// home</motion.h4>
-            </Link>
-            <Link style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} target="_blank" to="/About">
+            </a>
+            <a href="#about" style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} >
                 <motion.h4
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >// about me</motion.h4>
-            </Link>
-            <Link style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} target="_blank" to="/Work">
+            </a>
+            <a href="#work" style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} >
                 <motion.h4
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >// work</motion.h4>
-            </Link>
-            <Link style={{ textDecoration: 'none', color: 'inherit' }} target="_blank" to="/Projects">
+            </a>
+            <a href="#projects" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <motion.h4
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >// projects</motion.h4>
-            </Link>
+            </a>
 
         </Pages>
 
