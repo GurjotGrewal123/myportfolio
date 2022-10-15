@@ -42,6 +42,12 @@ font-family: "NTR", sans-serif;
     transform: translate(50px, 10px);
 }
 
+#about-links{
+    text-decoration: none;
+    color: #7FFFD4;
+    font-weight: 600;
+}
+
 `
 
 const About = () => {
@@ -56,7 +62,7 @@ const About = () => {
 
                 <AboutContent>
                     <div>
-                        I am currently a second year Software Engineering major at the University of Ottawa.
+                        I am currently a second year Software Engineering major at the <a id="about-links" href="https://www2.uottawa.ca/en">University of Ottawa</a>.
                         I have currently completed one of my five co-op terms.
                         I love learning new technologies and am always trying to grow my skillset.
                         I have been interested in designing programs since high-school; hence, my pursuit in this field.
@@ -68,14 +74,14 @@ const About = () => {
                             <ul>
                                 <li>Javascript ES6+</li>
                                 <li>Java</li>
-                                <li>Python</li>
                                 <li>React.js</li>
+                                <li>Python</li>
                                 <li>HTML & CSS</li>
 
                             </ul>
                         </div>
                         <br></br>
-                        Other than software development, I love to play basketball, video games, and edit videos.
+                        Other than software development, I love to play basketball, video games, and edit videos. You can hit me up to talk about any of these related topics!
                     </div>
                 </AboutContent>
 
