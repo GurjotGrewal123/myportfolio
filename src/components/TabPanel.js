@@ -4,6 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box"
+import { darkTheme } from './Themes';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -17,9 +19,9 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <div p={3}>
+                <Box p={3}>
                     <Typography>{children}</Typography>
-                </div>
+                </Box>
             )}
         </div>
     );
@@ -40,11 +42,12 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
-        backgroundColor: theme.palette.background.paper,
-        display: "flex",
-        height: 220,
-        padding: '5px',
+        transform: "translate(20%, 120%)",
+        backgroundColor: "black",
+        display: 'flex',
+        width: "75%",
+        WebkitTextFillColor: "white",
+        paddingBlock: "20px",
     },
     tabs: {
         borderRight: `1px solid ${theme.palette.divider}`,
@@ -63,7 +66,6 @@ export default function VerticalTabs() {
     return (
         <div className={classes.root}>
             <Tabs
-
                 orientation="vertical"
                 variant="scrollable"
                 value={value}
@@ -71,18 +73,18 @@ export default function VerticalTabs() {
                 aria-label="Vertical tabs example"
                 className={classes.tabs}
             >
-                <Tab label="Item One" {...a11yProps(0)} />
-                <Tab label="Item Two" {...a11yProps(1)} />
-                <Tab label="Item Three" {...a11yProps(2)} />
+                <Tab label="Nokia" {...a11yProps(0)} />
+                <Tab label="HOIST" {...a11yProps(1)} />
+                <Tab label="GAP" {...a11yProps(2)} />
             </Tabs>
             <TabPanel value={value} index={0}>
-                Item One
+                Nokia
             </TabPanel>
             <TabPanel value={value} index={1}>
-                Item Two
+                HOIST
             </TabPanel>
             <TabPanel value={value} index={2}>
-                Item Three
+                GAP
             </TabPanel>
         </div>
     );

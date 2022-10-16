@@ -12,6 +12,7 @@ height:100vh;
 position: relative;
 overflow: hidden;
 
+
 `
 
 const WorkTitle = styled.div`
@@ -34,7 +35,6 @@ const Work = () => {
                 <WorkTitle>
                     / Work Experience
                 </WorkTitle>
-
 
                 <TabPanel></TabPanel>
 
