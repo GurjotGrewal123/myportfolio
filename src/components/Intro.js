@@ -100,6 +100,15 @@ const Intro = () => {
         setClick(!click)
     }
 
+    const changeClick = () => {
+        if (window.scrollY >= "30") {
+            setClick(true);
+        }
+    }
+
+
+    window.addEventListener('scroll', changeClick);
+
     return (
         <IntroContainer id="home">
             <DarkDiv click={click} />

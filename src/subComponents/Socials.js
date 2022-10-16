@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Github, LinkedIn, Email } from "../components/AllSvgs"
 import { darkTheme } from "../components/Themes";
+import { useState } from 'react';
 
 const Icons = styled.div`
 display: flex;
@@ -18,19 +19,24 @@ z-index: 3;
 &>*:not(:last-child){
     margin: 0.3rem 0;
 }
+
 `
 
 
 
 const Line = styled.div`
+
 width: 2px;
 height: 5rem;
 background-color: ${props => props.color === 'dark' ? darkTheme.text : darkTheme.body};
 
-
 `
 
+
+
 const Socials = (props) => {
+
+
     return (
         <Icons>
             <div>
@@ -44,7 +50,7 @@ const Socials = (props) => {
                 </NavLink>
             </div>
             <div>
-                <NavLink style={{ color: 'inherit' }} target="_blank" to={{ pathname: "mailto:gurjot_grewal@outlook.com" }}>
+                <NavLink className="logo-white" style={{ color: 'inherit' }} target="_blank" to={{ pathname: "mailto:gurjot_grewal@outlook.com" }}>
                     <Email width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body} />
                 </NavLink>
             </div>

@@ -50,11 +50,24 @@ font-family: "NTR", sans-serif;
 
 `
 
+const AboutTitle = styled.div`
+position: absolute;
+left: 10%;
+top: 8%;
+color: ${(props) => props.theme.text};
+font-weight: 300;
+font-size: 3rem;
+`
+
 const About = () => {
     return (
         <ThemeProvider theme={darkTheme}>
             <AboutContainer id="about">
                 <Particle theme='dark' />
+
+                <AboutTitle>
+                    / About Me
+                </AboutTitle>
 
                 <Computer>
                     <iframe title="computerImg" src="https://giphy.com/embed/gH85KtY9fX2yd9eG4F" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
