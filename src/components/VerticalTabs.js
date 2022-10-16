@@ -54,6 +54,26 @@ paddingBlock: 5px;
 .tabs{
     overflow: visible;
 }
+
+#job-links{
+    text-decoration: none;
+    color: #7FFFD4;
+    font-weight: 600;
+}
+
+.job-points {
+    ::marker {
+    content: '▹';
+    color: #7FFFD4;
+    }
+    ::before{
+        content: "";
+        display: inline-block;
+        width: 0.5rem;
+        height: 1rem;
+    }
+}
+
 `
 
 const VerticalTabs = () => {
@@ -79,11 +99,16 @@ const VerticalTabs = () => {
                 <Tab label="GAP" {...a11yProps(2)} />
             </Tabs>
             <TabPanel value={value} index={0}>
-                Nokia
+                <span className="job-title">Security Software Developer @ </span>
+                <span className="job-company"><a id="job-links" href="https://www.nokia.com/" target="_blank">NOKIA</a></span>
+                <div className="job-duration">Jan 2023 - Apr 2023</div>
+                <ul className="job-desc">
+                    <li className="job-points">My future position for the Winter Co-op term.</li>
+                </ul>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <span className="job-title">Technical Business Analyst @</span>
-                <span className="job-company">HOIST</span>
+                <span className="job-title">Technical Business Analyst @ </span>
+                <span className="job-company"><a id="job-links" href="https://hoist.tech//" target="_blank">HOIST</a></span>
                 <div className="job-duration">May 2022 - Aug 2022</div>
                 <ul className="job-desc">
                     <li className="job-points">Configured cloud-based ERP and CRM solutions in IFS Application 10 for clients looking to centralize their business' data infrastructure.</li>
@@ -93,7 +118,14 @@ const VerticalTabs = () => {
                 </ul>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                GAP
+                <span className="job-title">Merchandise Handler @ </span>
+                <span className="job-company"><a id="job-links" href="https://www.gapcanada.ca/" target="_blank">GAP</a></span>
+                <div className="job-duration">June 2021 - Aug 2021</div>
+                <ul className="job-desc">
+                    <li className="job-points">Showed the ability of adapting quickly to my surroundings by moving and restocking merchandise in a large fast paced working environment.</li>
+                    <li className="job-points">Acquired teamwork skills by assisting my various team leaders to move working stations in order to prepare a safe working environment for my other colleagues.</li>
+                    <li className="job-points">Demonstrated flexibility by prioritizing certain tasks and creating a schedule to meet the needs of my team leaders.</li>
+                </ul>
             </TabPanel>
         </TabContainer>
     );

@@ -6,6 +6,7 @@ import Intro from "./components/Intro"
 import About from "./components/About"
 import Work from "./components/Work"
 import Projects from "./components/Projects"
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Work />
       <Projects />
+      <Footer></Footer>
     </ThemeProvider>
   </>
 
