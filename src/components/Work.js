@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from './Themes';
 import Particle from "../subComponents/Particle";
-import TabPanel from "./TabPanel";
+import VerticalTabs from "./VerticalTabs";
 
 
 const WorkContainer = styled.div`
@@ -35,7 +35,7 @@ const Work = () => {
                     / Work Experience
                 </WorkTitle>
 
-                <TabPanel></TabPanel>
+                <VerticalTabs></VerticalTabs>
 
             </WorkContainer>
         </ThemeProvider>

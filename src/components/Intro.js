@@ -5,10 +5,9 @@ import Socials from "../subComponents/Socials"
 import Navbar from "../subComponents/Navbar"
 import IntroContent from "./IntroContent"
 import { Basketball } from './AllSvgs';
-import { motion } from 'framer-motion';
 
 
-//passes theme
+//styling
 const IntroContainer = styled.div`
 background: ${props => props.theme.body};
 width: 100vw; 
@@ -37,15 +36,6 @@ from {
   }
 }
 
-`
-
-const rotate = keyframes`
-from{
-    transform: rotate(0);
-}
-to{
-    transform: rotate(360deg);
-}
 `
 
 const Center = styled.button`

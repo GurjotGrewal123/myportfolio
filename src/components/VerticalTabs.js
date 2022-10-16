@@ -4,9 +4,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box"
+import Box from "@material-ui/core/Box";
+import styled from "styled-components";
 
-function TabPanel(props) {
+const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
 
     return (
@@ -32,30 +33,30 @@ TabPanel.propTypes = {
     value: PropTypes.any.isRequired
 };
 
-function a11yProps(index) {
+const a11yProps = (index) => {
     return {
         id: `vertical-tab-${index}`,
         "aria-controls": `vertical-tabpanel-${index}`
     };
 }
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        transform: "translate(20%, 120%)",
-        border: "1px solid red",
-        backgroundColor: "black",
-        display: 'flex',
-        width: "75%",
-        WebkitTextFillColor: "white",
-        paddingBlock: "10px",
-    },
-    tabs: {
-        overflow: 'visible'
-    }
-}));
+const TabContainer = styled.div`
+transform: translate(20%, 60%);
+border: 1px solid red;
+backgroundColor: black;
+color: white;
+display: flex;
+height: 40vh;
+width: 70%;
+WebkitTextFillColor: white;
+paddingBlock: 5px;
 
-export default function VerticalTabs() {
-    const classes = useStyles();
+.tabs{
+    overflow: visible;
+}
+`
+
+const VerticalTabs = () => {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -63,15 +64,15 @@ export default function VerticalTabs() {
     };
 
     return (
-        <div className={classes.root}>
+        <TabContainer>
             <Tabs
                 TabIndicatorProps={{ style: { background: '#7FFFD4' } }}
                 orientation="vertical"
-                variant="scrollable"
+                variant="fixed"
                 value={value}
                 onChange={handleChange}
                 aria-label="Vertical tabs example"
-                className={classes.tabs}
+                className="tabs"
             >
                 <Tab label="Nokia" {...a11yProps(0)} />
                 <Tab label="HOIST" {...a11yProps(1)} />
@@ -81,18 +82,21 @@ export default function VerticalTabs() {
                 Nokia
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <span>
-                    <li>Technical Business Analyst</li>
-                    <li>@ HOIST</li>
-                    <li>MAY 2022 - AUG 2022</li>
-                    <p>details: [
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim fringilla dui ac mattis.",
-                        "Donec in sodales eros. Nulla fermentum, ante in venenatis pellentesque, justo odio viverra lorem, varius posuere erat tortor et magna."</p>
-                </span>
+                <span className="job-title">Technical Business Analyst @</span>
+                <span className="job-company">HOIST</span>
+                <div className="job-duration">May 2022 - Aug 2022</div>
+                <ul className="job-desc">
+                    <li className="job-points">Configured cloud-based ERP and CRM solutions in IFS Application 10 for clients looking to centralize their business' data infrastructure.</li>
+                    <li className="job-points">Learned SQL and PL/SQL for its relation to IFS Application 10 and used it in order to create custom objects and lobbies in various different screens.</li>
+                    <li className="job-points">Designed and tested Security Roles and their respective Permission Sets and Screen Projections in order to define how different users in our client's business should perform in IFS.</li>
+                    <li className="job-points">Performed migration jobs in order to transfer our client's data from old legacy systems into IFS, which allowed for an increased centralized database.</li>
+                </ul>
             </TabPanel>
             <TabPanel value={value} index={2}>
                 GAP
             </TabPanel>
-        </div>
+        </TabContainer>
     );
 }
+
+export default VerticalTabs;
