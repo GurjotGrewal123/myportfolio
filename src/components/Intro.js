@@ -6,7 +6,6 @@ import Navbar from "../subComponents/Navbar"
 import IntroContent from "./IntroContent"
 import { Basketball } from './AllSvgs';
 
-
 //styling
 const IntroContainer = styled.div`
 background: ${props => props.theme.body};
