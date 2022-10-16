@@ -32,6 +32,7 @@ align-items: center;
 font-size: 1rem;
 font-weight: 300;
 backdrop-filter: blur(4px);
+overflow: scroll;
 
 position: absolute;
 left: 10%;
@@ -47,6 +48,7 @@ font-family: "NTR", sans-serif;
     color: #7FFFD4;
     font-weight: 600;
 }
+
 
 `
 
@@ -74,7 +76,7 @@ const About = () => {
                 </Computer>
 
                 <AboutContent>
-                    <div>
+                    <div >
                         I am currently a second year Software Engineering major at the <a id="about-links" href="https://www2.uottawa.ca/en">University of Ottawa</a>.
                         I have currently completed one of my five co-op terms.
                         I love learning new technologies and am always trying to grow my skillset.
