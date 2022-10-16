@@ -9,6 +9,22 @@ width: 100vw;
 height:100vh;
 position: relative;
 overflow: hidden;
+
+`
+
+const ProjectTitle = styled.div`
+position: absolute;
+left: 10%;
+top: 8%;
+color: ${(props) => props.theme.text};
+font-weight: 300;
+font-size: 3rem;
+
+.project-content{
+    position: absolute;
+    font-size: 1rem;
+    padding-top: 2rem;
+}
 `
 
 const Projects = () => {
@@ -16,7 +32,10 @@ const Projects = () => {
         <ThemeProvider theme={darkTheme}>
             <ProjectContainer id="projects">
                 <Particle theme='dark' />
-                Projects
+                <ProjectTitle>
+                    / Projects
+                    <p className='project-content'>a work in progress...</p>
+                </ProjectTitle>
             </ProjectContainer>
         </ThemeProvider>
     )

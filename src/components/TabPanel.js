@@ -5,7 +5,6 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box"
-import { darkTheme } from './Themes';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -43,14 +42,14 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
     root: {
         transform: "translate(20%, 120%)",
+        border: "1px solid red",
         backgroundColor: "black",
         display: 'flex',
         width: "75%",
         WebkitTextFillColor: "white",
-        paddingBlock: "20px",
+        paddingBlock: "10px",
     },
     tabs: {
-        borderRight: `1px solid ${theme.palette.divider}`,
         overflow: 'visible'
     }
 }));
@@ -66,6 +65,7 @@ export default function VerticalTabs() {
     return (
         <div className={classes.root}>
             <Tabs
+                TabIndicatorProps={{ style: { background: '#7FFFD4' } }}
                 orientation="vertical"
                 variant="scrollable"
                 value={value}
@@ -81,7 +81,14 @@ export default function VerticalTabs() {
                 Nokia
             </TabPanel>
             <TabPanel value={value} index={1}>
-                HOIST
+                <span>
+                    <li>Technical Business Analyst</li>
+                    <li>@ HOIST</li>
+                    <li>MAY 2022 - AUG 2022</li>
+                    <p>details: [
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim fringilla dui ac mattis.",
+                        "Donec in sodales eros. Nulla fermentum, ante in venenatis pellentesque, justo odio viverra lorem, varius posuere erat tortor et magna."</p>
+                </span>
             </TabPanel>
             <TabPanel value={value} index={2}>
                 GAP
