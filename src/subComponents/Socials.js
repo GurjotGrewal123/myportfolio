@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Github, LinkedIn, Email } from "../components/AllSvgs"
 import { darkTheme } from "../components/Themes";
-import { useState } from 'react';
 
 const Icons = styled.div`
 display: flex;
@@ -31,8 +30,6 @@ height: 5rem;
 background-color: ${props => props.color === 'dark' ? darkTheme.text : darkTheme.body};
 
 `
-
-
 
 const Socials = (props) => {
 

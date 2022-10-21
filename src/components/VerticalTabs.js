@@ -1,11 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import styled from "styled-components";
+
+const WorkText = styled.div`
+top: 0;
+position: absolute;
+padding-left: 1rem;
+`
 
 const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
@@ -20,7 +25,9 @@ const TabPanel = (props) => {
         >
             {value === index && (
                 <Box p={3}>
-                    <Typography>{children}</Typography>
+                    <WorkText>
+                        <Typography>{children}</Typography>
+                    </WorkText>
                 </Box>
             )}
         </div>
@@ -42,7 +49,6 @@ const a11yProps = (index) => {
 
 const TabContainer = styled.div`
 transform: translate(20%, 60%);
-border: 1px solid red;
 backgroundColor: black;
 color: white;
 display: flex;
@@ -59,9 +65,12 @@ paddingBlock: 5px;
     text-decoration: none;
     color: #7FFFD4;
     font-weight: 600;
+    font-size: 1.3rem;
 }
 
+
 .job-points {
+    padding: 0.3rem;
     ::marker {
     content: '▹';
     color: #7FFFD4;
@@ -72,6 +81,15 @@ paddingBlock: 5px;
         width: 0.5rem;
         height: 1rem;
     }
+}
+
+.job-title{
+    font-size: 1.1rem;
+}
+
+.job-desc{
+    padding-top: 1rem;
+    font-weight: 300;
 }
 
 `

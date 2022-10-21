@@ -19,8 +19,8 @@ scale: 1.5;
 `
 
 const AboutContent = styled.div`
-color: ${(props) => props.theme.text};
-border: 1px solid ${(props) => props.theme.text};
+color: ${props => props.theme.text};
+border: 1px solid ${props => props.theme.text};
 padding: 2rem;
 width: 50vw;
 height: 60vh;

@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from './Themes';
-import Particle from "../subComponents/Particle";
 
 const CreditContainer = styled.div`
 background-color: ${props => props.theme.body};
@@ -11,7 +10,6 @@ height: 8vh;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-overflow: hidden;
 
 .footer-content{
     -webkit-text-fill-color: white;

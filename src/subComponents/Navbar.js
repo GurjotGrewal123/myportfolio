@@ -16,7 +16,7 @@ padding-bottom: 3.8rem;
 z-index: 3;
 
 .navbar-white {
-    -webkit-text-fill-color: rgba(252, 246, 244, 1);
+    -webkit-text-fill-color: ${props => props.theme.body};
 }
 
 `
