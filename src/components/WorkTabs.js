@@ -94,7 +94,7 @@ paddingBlock: 5px;
 
 `
 
-const VerticalTabs = () => {
+const WorkTabs = () => {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -121,7 +121,9 @@ const VerticalTabs = () => {
                 <span className="job-company"><a id="job-links" href="https://www.nokia.com/" target="_blank">NOKIA</a></span>
                 <div className="job-duration">Jan 2023 - Apr 2023</div>
                 <ul className="job-desc">
-                    <li className="job-points">My future position for the Winter Co-op term.</li>
+                    <li className="job-points">Maintained CKEY, an extension to a free and open-source software (Keycloak), that provides Web Single Sign-On (SSO) and other identity and access management related functions for RESTful web services, web apps, and mobile.</li>
+                    <li className="job-points">Performed and documented Quarkus CKEY load dimensioning tests in an Agile environment for vertical, horizontal and user scalability to identify resource or software bottlenecks.</li>
+                    <li className="job-points">Provided bugs, defects, and enhancements support for product teams that implement CKEY by investigating and updating codebase based on the acquired solution.</li>
                 </ul>
             </TabPanel>
             <TabPanel value={value} index={1}>
@@ -149,4 +151,4 @@ const VerticalTabs = () => {
     );
 }
 
-export default VerticalTabs;
+export default WorkTabs;

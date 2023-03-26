@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from './Themes';
 import Particle from "../subComponents/Particle";
-import VerticalTabs from "./VerticalTabs";
+import WorkTabs from "./WorkTabs";
 
 
 const WorkContainer = styled.div`
@@ -29,13 +29,13 @@ const Work = () => {
     return (
         <ThemeProvider theme={darkTheme}>
             <WorkContainer id="work">
-                <Particle />
+                <Particle theme='dark' />
 
                 <WorkTitle>
                     / Work Experience
                 </WorkTitle>
 
-                <VerticalTabs></VerticalTabs>
+                <WorkTabs></WorkTabs>
 
             </WorkContainer>
         </ThemeProvider>
