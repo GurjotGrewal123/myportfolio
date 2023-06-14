@@ -32,9 +32,10 @@ position: relative;
 display: flex;
 .pic{
     position: absolute;
+    object-fit: cover;
     bottom: 0;
     left: 50%;
-    max-height: 50vh;
+    max-height: 60vh;
     max-width: 32vw;
     transform: translate(-50%,-1.5%);
     height: auto;
@@ -49,10 +50,14 @@ padding: 2rem;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
+min-width: 80px;
 &>*:last-child{
     color: ${props => `rgba(${props.theme.bodyRgba},0.6)`};
     font-size: calc(0.5rem + 1.5vw);
     font-weight:300;
+}
+h3{
+    font-size:calc(17px + 2vw);
 }
 `
 

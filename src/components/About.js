@@ -6,7 +6,7 @@ import Particle from "../subComponents/Particle"
 const AboutContainer = styled.div`
 background-color: ${props => props.theme.body};
 width: 100vw;
-height:100vh;
+height: 100vh;
 position: relative;
 overflow: hidden;
 `
@@ -29,11 +29,10 @@ line-height: 1.5;
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: 1rem;
+font-size: calc(0.5rem + 1.5vh);
 font-weight: 300;
 backdrop-filter: blur(4px);
-overflow: scroll;
-
+overflow-y: scroll;
 position: absolute;
 left: 10%;
 top: 10rem;
@@ -49,7 +48,11 @@ font-family: "NTR", sans-serif;
     font-weight: 600;
 }
 
-
+.scroll-wrapper {
+    top: 0;
+    height: 100%;
+    padding-bottom: 10px;
+  }
 `
 
 const AboutTitle = styled.div`
@@ -76,7 +79,7 @@ const About = () => {
                 </Computer>
 
                 <AboutContent>
-                    <div >
+                    <div class="scroll-wrapper">
                         I am currently a second year Software Engineering major at the <a id="about-links" href="https://www2.uottawa.ca/en">University of Ottawa</a>.
                         I have currently completed one of my five co-op terms.
                         I love learning new technologies and am always trying to grow my skillset.
@@ -87,9 +90,10 @@ const About = () => {
                         Here are some technologies I have been working with:
                         <div className="technologies">
                             <ul>
-                                <li>Javascript ES6+</li>
+                                <li>Javascript / Typescript</li>
                                 <li>Java</li>
                                 <li>React.js</li>
+                                <li>Angular</li>
                                 <li>Python</li>
                                 <li>HTML & CSS</li>
 
