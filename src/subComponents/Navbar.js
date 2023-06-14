@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 
 const Pages = styled.div`
@@ -28,6 +28,7 @@ const Navbar = () => {
     const [color2, setColor2] = useState(false);
     const [color3, setColor3] = useState(false);
     const [color4, setColor4] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 420);
 
     const changeColor = () => {
         if (window.scrollY >= "155") {
@@ -56,7 +57,18 @@ const Navbar = () => {
         }
     }
 
-    window.addEventListener('scroll', changeColor);
+    const handleResize = () => {
+        setIsMobile(window.innerWidth < 420);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", changeColor);
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("scroll", changeColor);
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     return (
         <Pages>
@@ -64,25 +76,25 @@ const Navbar = () => {
                 <motion.h4
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                >// home</motion.h4>
+                > {isMobile ? "// 🏠" : "// home"}</motion.h4>
             </a>
             <a href="#about" className={color2 ? "navbar-white" : "navbar-black"} style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} >
                 <motion.h4
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                >// about me</motion.h4>
+                > {isMobile ? "// 👨🏽" : "// about me"}</motion.h4>
             </a>
             <a href="#work" className={color3 ? "navbar-white" : "navbar-black"} style={{ textDecoration: 'none', color: 'inherit', marginBottom: "0.8rem" }} >
                 <motion.h4
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                >// work</motion.h4>
+                > {isMobile ? "// 💼" : "// work"}</motion.h4>
             </a>
             <a href="#projects" className={color4 ? "navbar-white" : "navbar-black"} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <motion.h4
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                >// projects</motion.h4>
+                > {isMobile ? "// 👨🏽‍💻" : "// projects"}</motion.h4>
             </a>
 
         </Pages>
