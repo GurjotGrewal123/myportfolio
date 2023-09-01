@@ -115,16 +115,13 @@ const WorkTabs = () => {
                 <Tab label="uOTTAWA" {...a11yProps(0)} />
                 <Tab label="NOKIA" {...a11yProps(1)} />
                 <Tab label="HOIST" {...a11yProps(2)} />
-                <Tab label="GAP" {...a11yProps(3)} />
             </Tabs>
             <TabPanel value={value} index={0}>
                 <span className="job-title">Full Stack Web Developer @ </span>
                 <span className="job-company"><a id="job-links" href="https://www.uottawa.ca/faculty-engineering/outreach" target="_blank">uOTTAWA</a></span>
                 <div className="job-duration">Sep 2023 - Dec 2023</div>
                 <ul className="job-desc">
-                    <li className="job-points">Maintained CKEY, an extension to a free and open-source software (Keycloak), that provides Web Single Sign-On (SSO) and other identity and access management related functions for RESTful web services, web apps, and mobile.</li>
-                    <li className="job-points">Performed and documented Quarkus CKEY load dimensioning tests in an Agile environment for vertical, horizontal and user scalability to identify resource or software bottlenecks.</li>
-                    <li className="job-points">Provided bugs, defects, and enhancements support for product teams that implement CKEY by investigating and updating codebase based on the acquired solution.</li>
+                    <li className="job-points">Placeholder.</li>
                 </ul>
             </TabPanel>
             <TabPanel value={value} index={1}>
@@ -146,16 +143,6 @@ const WorkTabs = () => {
                     <li className="job-points">Learned SQL and PL/SQL for its relation to IFS Application 10 and used it in order to create custom objects and lobbies in various different screens.</li>
                     <li className="job-points">Designed and tested Security Roles and their respective Permission Sets and Screen Projections in order to define how different users in our client's business should perform in IFS.</li>
                     <li className="job-points">Performed migration jobs in order to transfer our client's data from old legacy systems into IFS, which allowed for an increased centralized database.</li>
-                </ul>
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-                <span className="job-title">Merchandise Handler @ </span>
-                <span className="job-company"><a id="job-links" href="https://www.gapcanada.ca/" target="_blank">GAP</a></span>
-                <div className="job-duration">June 2021 - Aug 2021</div>
-                <ul className="job-desc">
-                    <li className="job-points">Showed the ability of adapting quickly to my surroundings by moving and restocking merchandise in a large fast paced working environment.</li>
-                    <li className="job-points">Acquired teamwork skills by assisting my various team leaders to move working stations in order to prepare a safe working environment for my other colleagues.</li>
-                    <li className="job-points">Demonstrated flexibility by prioritizing certain tasks and creating a schedule to meet the needs of my team leaders.</li>
                 </ul>
             </TabPanel>
         </TabContainer>
