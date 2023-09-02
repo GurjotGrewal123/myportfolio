@@ -121,7 +121,7 @@ const WorkTabs = () => {
                 <span className="job-company"><a id="job-links" href="https://www.uottawa.ca/faculty-engineering/outreach" target="_blank">uOTTAWA</a></span>
                 <div className="job-duration">Sep 2023 - Dec 2023</div>
                 <ul className="job-desc">
-                    <li className="job-points">Placeholder.</li>
+                    <li className="job-points">Currently working in this position.</li>
                 </ul>
             </TabPanel>
             <TabPanel value={value} index={1}>
