@@ -5,6 +5,7 @@ import Socials from "../subComponents/Socials"
 import Navbar from "../subComponents/Navbar"
 import IntroContent from "./IntroContent"
 import { Basketball } from './AllSvgs';
+import Particle from "../subComponents/Particle";
 
 //styling
 const IntroContainer = styled.div`
@@ -100,7 +101,9 @@ const Intro = () => {
 
     return (
         <IntroContainer id="home">
-            <DarkDiv click={click} />
+            <DarkDiv click={click}>
+                <Particle/>
+            </DarkDiv>
             <Container>
                 <Socials theme={click ? 'dark' : 'light'} />
                 <Navbar />

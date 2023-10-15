@@ -29,8 +29,7 @@ const Work = () => {
     return (
         <ThemeProvider theme={darkTheme}>
             <WorkContainer id="work">
-                <Particle theme='dark' />
-
+            <Particle />
                 <WorkTitle>
                     / Work Experience
                 </WorkTitle>

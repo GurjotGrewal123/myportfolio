@@ -68,7 +68,7 @@ const About = () => {
     return (
         <ThemeProvider theme={darkTheme}>
             <AboutContainer id="about">
-                <Particle theme='dark' />
+                   <Particle />
 
                 <AboutTitle>
                     / About Me

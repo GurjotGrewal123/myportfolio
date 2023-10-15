@@ -31,7 +31,7 @@ const Projects = () => {
     return (
         <ThemeProvider theme={darkTheme}>
             <ProjectContainer id="projects">
-                <Particle theme='dark' />
+            <Particle />
                 <ProjectTitle>
                     / Projects
                     <p className='project-content'>a work in progress...</p>
